@@ -37,3 +37,25 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
+//
+// Example: Update the img src for the logo
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// Navigation Section
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(function (currentValue, index) {
+  currentValue.innerHTML = siteContent.nav[`nav-item-${index +1}`];
+});
+
+
+// cta Section
+let ctaText = document.querySelector('h1');
+ctaText.textContent = siteContent.cta.h1;
+
+let ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent.cta.button;
+
+let ctaImage = document.querySelector('img-src');
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
