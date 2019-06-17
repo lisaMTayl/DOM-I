@@ -42,7 +42,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// Navigation Section
+// Navigation
 const navLinks = document.querySelectorAll('nav a');
 
 navLinks.forEach(function (currentValue, index) {
@@ -50,12 +50,56 @@ navLinks.forEach(function (currentValue, index) {
 });
 
 
-// cta Section
+// cta
 let ctaText = document.querySelector('h1');
 ctaText.textContent = siteContent.cta.h1;
 
 let ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent.cta.button;
 
-let ctaImage = document.querySelector('img-src');
+let ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+// Main Content
+// Top Content
+//Features
+let mainContent = document.querySelector('main-content');
+mainContent = siteContent["main-content"];
+
+// Top Content
+let topContent = document.querySelectorAll('top-content');
+topContent = document["topContent"];
+
+
+
+// Top Content Headers
+let featuresHeader = document.getElementsByTagName('h4')[0];
+featuresHeader.textContent = siteContent["main-content"]["features-h4"];
+let aboutHeader = document.getElementsByTagName('h4')[1];
+aboutHeader.textContent = siteContent["main-content"]["about-h4"];
+
+// Top Content Paragraphs
+let featuresText = document.getElementsByTagName('p')[0];
+featuresText.textContent = siteContent["main-content"]["features-content"];
+let aboutText = document.getElementsByTagName('p')[1];
+aboutText.textContent = siteContent["main-content"]["about-content"];
+
+// Middle Image
+//let middleImage = document.getElementById('middle-img');
+//ctaImage.setAttribute('src', siteContent["main-content"]['middle-img-src']);
+
+// Bottom Content Headers
+let servicesHeader = document.getElementsByTagName('h4')[0];
+servicesHeader.textContent = siteContent["main-content"]["services-h4"];
+let productHeader = document.getElementsByTagName('h4')[1];
+productHeader.textContent = siteContent["main-content"]["product-h4"];
+let visionHeader = document.getElementsByTagName('h4')[2];
+visionHeader.textContent = siteContent["main-content"]["vision-h4"];
+
+// Bottom Content Paragraphs
+let servicesText = document.getElementsByTagName('p')[0];
+servicesText.textContent = siteContent["main-content"]["services-content"];
+let productText = document.getElementsByTagName('p')[1];
+productText.textContent = siteContent["main-content"]["product-content"];
+let visionText = document.getElementsByTagName('p')[2];
+visionText.textContent = siteContent["main-content"]["vision-content"];
