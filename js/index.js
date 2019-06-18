@@ -104,3 +104,9 @@ contentP[5].setAttribute('style', 'white-space: pre-line'); // to force line bre
 //contentP[5].textContent = siteContent["contact"]["address"];
 contentP[6].textContent = siteContent["contact"]["phone"];
 contentP[7].textContent = siteContent["contact"]["email"];
+
+// navigation append() and prepend()
+
+// footer
+let footerTxt = document.querySelector("footer");
+footerTxt.textContent= siteContent["footer"]["copyright"];
