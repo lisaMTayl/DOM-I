@@ -1,4 +1,5 @@
 const siteContent = {
+
   "nav": {
     "nav-item-1": "Services",
     "nav-item-2": "Product",
@@ -36,7 +37,80 @@ const siteContent = {
     "copyright" : "Copyright Great Idea! 2018"
   },
 };
-
+//
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// Navigation
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(function (currentValue, index) {
+  currentValue.innerHTML= siteContent.nav[`nav-item-${index +1}`];
+});
+
+// append() and prepend() nav links
+const addLink = document.querySelector('nav');
+
+const navFaqLink = document.createElement('a');
+navFaqLink.textContent = 'FAQ';
+navFaqLink.setAttribute('href',  '#');
+navFaqLink.style.color = 'green';
+addLink.appendChild(navFaqLink);
+
+const navBlogLink = document.createElement('a');
+navBlogLink.textContent = 'Blog';
+navFaqLink.setAttribute('href',  '#');
+navBlogLink.style.color = 'green';
+addLink.prepend(navBlogLink);
+
+// turn nav links green
+navLinks.forEach(function(currentValue) {
+  currentValue.element = currentValue.style.color = "green";
+});
+
+
+// cta section
+const ctaText = document.querySelector('h1');
+
+// formatted h1 for line breaks
+ctaText.textContent = `DOM\r\nIs\r\nAwesome`;
+ctaText.setAttribute('style', 'white-space: pre-line');
+//ctaText.textContent = siteContent.cta.h1;
+
+const ctaBtn = document.querySelector('button');
+ctaBtn.textContent = siteContent.cta.button;
+
+const ctaImage = document.getElementById('cta-img');
+ctaImage.setAttribute('src', siteContent['cta']['img-src']);
+
+// main content
+const contentH4 = document.getElementsByTagName('h4');
+const contentP = document.getElementsByTagName('p');
+
+contentH4[0].textContent = siteContent["main-content"]["features-h4"];
+contentH4[1].textContent = siteContent["main-content"]["about-h4"];
+contentH4[2].textContent = siteContent["main-content"]["services-h4"];
+contentH4[3].textContent = siteContent["main-content"]["product-h4"];
+contentH4[4].textContent = siteContent["main-content"]["vision-h4"];
+contentH4[5].textContent = siteContent["contact"]["contact-h4"];
+
+
+contentP[0].textContent = siteContent["main-content"]["features-content"];
+contentP[1].textContent = siteContent["main-content"]["about-content"];// top-content
+contentP[2].textContent = siteContent["main-content"]["services-content"];// features
+contentP[3].textContent = siteContent["main-content"]["product-content"];
+contentP[4].textContent = siteContent["main-content"]["vision-content"];
+
+// middle-image
+const middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// footer
+let footerTxt = document.querySelector("footer");
+footerTxt.textContent= siteContent["footer"]["copyright"];
+
+contentP[5].textContent = `123 Way 456 Street\r\nSomewhere, USA`; // to force line breaks
+contentP[5].setAttribute('style', 'white-space: pre-line'); // to force line breaks
+contentP[6].textContent = siteContent["contact"]["phone"];
+contentP[7].textContent = siteContent["contact"]["email"];
