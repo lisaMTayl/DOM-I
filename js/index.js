@@ -45,7 +45,6 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // Navigation
 const navLinks = document.querySelectorAll('nav a');
 
-// Rename nav links
 navLinks.forEach(function (currentValue, index) {
   currentValue.innerHTML= siteContent.nav[`nav-item-${index +1}`];
 });
@@ -56,28 +55,46 @@ navLinks.forEach(function(currentValue, index) {
 });
 
 // cta section
-
-let ctaText = document.querySelector('h1');
+const ctaText = document.querySelector('h1');
 ctaText.textContent = siteContent.cta.h1;
 
-let ctaButton = document.querySelector('button');
-ctaButton.textContent = siteContent.cta.button;
+const ctaBtn = document.querySelector('button');
+ctaBtn.textContent = siteContent.cta.button;
 
-let ctaImage = document.getElementById('cta-img');
+const ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 
 // main content
-let contHeaders = document.getElementsByTagName('h4');
-let contText = document.getElementsByTagName('p');
+const contentH4 = document.getElementsByTagName('h4');
+const contentP = document.getElementsByTagName('p');
 
 // top-content
-const contBlocks = siteContent['top-content'];
-contHeaders[0].textContent = siteContent["main-content"]["features-h4"];
-contText[0].textContent = siteContent["main-content"]["features-content"];
-contHeaders[1].textContent = siteContent["main-content"]["about-h4"];
-contText[1].textContent = siteContent["main-content"]["about-content"];
+// features
+contentH4[0].textContent = siteContent["main-content"]["features-h4"];
+contentP[0].textContent = siteContent["main-content"]["features-content"];
+
+// about
+contentH4[1].textContent = siteContent["main-content"]["about-h4"];
+contentP[1].textContent = siteContent["main-content"]["about-content"];
+
+// services
+contentH4[2].textContent = siteContent["main-content"]["services-h4"];
+contentP[2].textContent = siteContent["main-content"]["services-content"];
+
+// product
+contentH4[3].textContent = siteContent["main-content"]["product-h4"];
+contentP[3].textContent = siteContent["main-content"]["product-content"];
+
+// vision
+contentH4[4].textContent = siteContent["main-content"]["vision-h4"];
+contentP[4].textContent = siteContent["main-content"]["vision-content"];
 
 // middle-image
 const middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+// contact
+contentH4[5].textContent = siteContent["contact"]["contact-h4"];
+contentP[5].textContent = siteContent["contact"]["address"];
+contentP[6].textContent = siteContent["contact"]["phone"];
+contentP[7].textContent = siteContent["contact"]["email"];
