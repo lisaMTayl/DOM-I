@@ -48,33 +48,19 @@ const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(function (currentValue, index) {
   currentValue.innerHTML= siteContent.nav[`nav-item-${index +1}`];
 });
-// navLinks[0].textContent = `Services`;
-// navLinks[1].textContent = `Product`;
-// navLinks[2].textContent = `Vision`;
-// navLinks[3].textContent = `Features`;
-// navLinks[4].textContent = `About`;
-// navLinks[5].textContent = `Contact`;
-//
 
-// let navBlog = document.createElement("nav");
-// navBlog.href = `#`;
-// navBlog.textContent = `Blog`;
-//navLinks.prepend(navBlog);
-
-
-// let navFaq = document.createElement("nav");
-// navFaq.href = `#`;
-// navFaq.textContent = "FAQ";
+// append() and prepend() nav links
 const addLink = document.querySelector('nav');
 
 const navFaqLink = document.createElement('a');
 navFaqLink.textContent = 'FAQ';
-navFaqLink.href = '#';
+navFaqLink.setAttribute('href',  '#');
 navFaqLink.style.color = 'green';
 addLink.appendChild(navFaqLink);
 
 const navBlogLink = document.createElement('a');
 navBlogLink.textContent = 'Blog';
+navFaqLink.setAttribute('href',  '#');
 navBlogLink.style.color = 'green';
 addLink.prepend(navBlogLink);
 
