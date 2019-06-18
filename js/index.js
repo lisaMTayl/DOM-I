@@ -56,21 +56,34 @@ navLinks.forEach(function (currentValue, index) {
 // navLinks[5].textContent = `Contact`;
 //
 
-let navBlog = document.createElement("nav");
-navBlog.href = `#`;
-navBlog.textContent = `Blog`;
+// let navBlog = document.createElement("nav");
+// navBlog.href = `#`;
+// navBlog.textContent = `Blog`;
 //navLinks.prepend(navBlog);
 
 
-let navFaq = document.createElement("nav");
-navFaq.href = `#`;
-navFaq.textContent = "FAQ";
+// let navFaq = document.createElement("nav");
+// navFaq.href = `#`;
+// navFaq.textContent = "FAQ";
+const addLink = document.querySelector('nav');
+addLink.style.color="green";
 
+const navFaqLink = document.createElement('a');
+navFaqLink.textContent = 'FAQ';
+navFaqLink.href = '#';
+navFaqLink.style.color = 'green';
+addLink.appendChild(navFaqLink);
+
+const navBlogLink = document.createElement('a');
+navBlogLink.textContent = 'Blog';
+navBlogLink.style.color = 'green';
+addLink.prepend(navBlogLink);
 
 // turn nav links green
 navLinks.forEach(function(currentValue, index) {
   currentValue.element = currentValue.style.color = "green";
 });
+
 
 // cta section
 const ctaText = document.querySelector('h1');
