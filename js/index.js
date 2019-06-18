@@ -99,6 +99,8 @@ middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // contact
 contentH4[5].textContent = siteContent["contact"]["contact-h4"];
-contentP[5].textContent = siteContent["contact"]["address"];
+contentP[5].textContent = `123 Way 456 Street\r\nSomewhere, USA`; // to force line breaks
+contentP[5].setAttribute('style', 'white-space: pre-line'); // to force line breaks
+//contentP[5].textContent = siteContent["contact"]["address"];
 contentP[6].textContent = siteContent["contact"]["phone"];
 contentP[7].textContent = siteContent["contact"]["email"];
