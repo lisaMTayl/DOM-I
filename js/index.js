@@ -49,6 +49,34 @@ navLinks.forEach(function (currentValue, index) {
   currentValue.innerHTML= siteContent.nav[`nav-item-${index +1}`];
 });
 
+// let navBlog = document.createElement("nav a");
+// navBlog.href = `#`;
+// navBlog.textContent = `Blog`;
+// navLinks.prepend(navBlog);
+
+// navLinks[0].textContent = `Services`;
+// navLinks[1].textContent = `Product`;
+// navLinks[2].textContent = `Vision`;
+// navLinks[3].textContent = `Features`;
+// navLinks[4].textContent = `About`;
+// navLinks[5].textContent = `Contact`;
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // turn nav links green
 navLinks.forEach(function(currentValue, index) {
   currentValue.element = currentValue.style.color = "green";
@@ -105,7 +133,6 @@ contentP[5].setAttribute('style', 'white-space: pre-line'); // to force line bre
 contentP[6].textContent = siteContent["contact"]["phone"];
 contentP[7].textContent = siteContent["contact"]["email"];
 
-// navigation append() and prepend()
 
 // footer
 let footerTxt = document.querySelector("footer");
