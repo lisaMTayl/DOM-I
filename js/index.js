@@ -54,6 +54,13 @@ navLinks.forEach(function (currentValue, index) {
 // navBlog.textContent = `Blog`;
 // navLinks.prepend(navBlog);
 
+
+// let navFAQ = document.createElement("nav a");
+// navFAQ.href = `#`;
+// navFAQ.textContent = "FAQ";
+
+
+
 // navLinks[0].textContent = `Services`;
 // navLinks[1].textContent = `Product`;
 // navLinks[2].textContent = `Vision`;
