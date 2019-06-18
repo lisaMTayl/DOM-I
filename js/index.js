@@ -102,40 +102,29 @@ ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 const contentH4 = document.getElementsByTagName('h4');
 const contentP = document.getElementsByTagName('p');
 
-// top-content
-// features
 contentH4[0].textContent = siteContent["main-content"]["features-h4"];
-contentP[0].textContent = siteContent["main-content"]["features-content"];
-
-// about
 contentH4[1].textContent = siteContent["main-content"]["about-h4"];
-contentP[1].textContent = siteContent["main-content"]["about-content"];
-
-// services
 contentH4[2].textContent = siteContent["main-content"]["services-h4"];
-contentP[2].textContent = siteContent["main-content"]["services-content"];
-
-// product
 contentH4[3].textContent = siteContent["main-content"]["product-h4"];
-contentP[3].textContent = siteContent["main-content"]["product-content"];
-
-// vision
 contentH4[4].textContent = siteContent["main-content"]["vision-h4"];
+contentH4[5].textContent = siteContent["contact"]["contact-h4"];
+
+
+contentP[0].textContent = siteContent["main-content"]["features-content"];
+contentP[1].textContent = siteContent["main-content"]["about-content"];// top-content
+contentP[2].textContent = siteContent["main-content"]["services-content"];// features
+contentP[3].textContent = siteContent["main-content"]["product-content"];
 contentP[4].textContent = siteContent["main-content"]["vision-content"];
 
 // middle-image
 const middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-// contact
-contentH4[5].textContent = siteContent["contact"]["contact-h4"];
-contentP[5].textContent = `123 Way 456 Street\r\nSomewhere, USA`; // to force line breaks
-contentP[5].setAttribute('style', 'white-space: pre-line'); // to force line breaks
-//contentP[5].textContent = siteContent["contact"]["address"];
-contentP[6].textContent = siteContent["contact"]["phone"];
-contentP[7].textContent = siteContent["contact"]["email"];
-
-
 // footer
 let footerTxt = document.querySelector("footer");
 footerTxt.textContent= siteContent["footer"]["copyright"];
+
+contentP[5].textContent = `123 Way 456 Street\r\nSomewhere, USA`; // to force line breaks
+contentP[5].setAttribute('style', 'white-space: pre-line'); // to force line breaks
+contentP[6].textContent = siteContent["contact"]["phone"];
+contentP[7].textContent = siteContent["contact"]["email"];
