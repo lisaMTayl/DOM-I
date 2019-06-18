@@ -45,12 +45,18 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // Navigation
 const navLinks = document.querySelectorAll('nav a');
 
+// Rename nav links
 navLinks.forEach(function (currentValue, index) {
-  currentValue.innerHTML = siteContent.nav[`nav-item-${index +1}`];
+  currentValue.innerHTML= siteContent.nav[`nav-item-${index +1}`];
 });
 
+// turn nav links green
+navLinks.forEach(function(currentValue, index) {
+  currentValue.element = currentValue.style.color = "green";
+});
 
-// cta
+// cta section
+
 let ctaText = document.querySelector('h1');
 ctaText.textContent = siteContent.cta.h1;
 
@@ -60,36 +66,18 @@ ctaButton.textContent = siteContent.cta.button;
 let ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 
-// Main Content
+// main content
+let contHeaders = document.getElementsByTagName('h4');
+let contText = document.getElementsByTagName('p');
 
-// Top Content Headers
-let featuresHeader = document.getElementsByTagName('h4')[0];
-featuresHeader.textContent = siteContent["main-content"]["features-h4"];
-let aboutHeader = document.getElementsByTagName('h4')[1];
-aboutHeader.textContent = siteContent["main-content"]["about-h4"];
+// top-content
+const contBlocks = siteContent['top-content'];
+contHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+contText[0].textContent = siteContent["main-content"]["features-content"];
+contHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+contText[1].textContent = siteContent["main-content"]["about-content"];
 
-// Top Content Paragraphs
-let featuresText = document.getElementsByTagName('p')[0];
-featuresText.textContent = siteContent["main-content"]["features-content"];
-let aboutText = document.getElementsByTagName('p')[1];
-aboutText.textContent = siteContent["main-content"]["about-content"];
+// middle-image
+const middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-//Middle Image
-let middleImage = document.getElementById('middle-img');
-middleImage.setAttribute('src', siteContent["main-content"]['middle-img-src']);
-
-// Bottom Content Headers
-let servicesHeader = document.getElementsByTagName('bottom-content h4')[0];
-servicesHeader.textContent = siteContent["bottom-content"]["services-h4"];
-let productHeader = document.getElementsByTagName('h4')[1];
-productHeader.textContent = siteContent["bottom-content"]["product-h4"];
-let visionHeader = document.getElementsByTagName('h4')[2];
-visionHeader.textContent = siteContent["bottom-content"]["vision-h4"];
-
-// Bottom Content Paragraphs
-let servicesText = document.getElementsByName('p')[0];
-servicesText.textContent = siteContent["bottom-content"]["services-content"];
-let productText = document.getElementsByTagName('p')[1];
-productText.textContent = siteContent["bottom-content"]["product-content"];
-let visionText = document.getElementsByTagName('p')[2];
-visionText.textContent = siteContent["bottom-content"]["vision-content"];
