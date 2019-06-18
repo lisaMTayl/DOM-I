@@ -56,7 +56,11 @@ navLinks.forEach(function(currentValue, index) {
 
 // cta section
 const ctaText = document.querySelector('h1');
-ctaText.textContent = siteContent.cta.h1;
+
+// formatted h1 for line breaks
+ctaText.textContent = `DOM\r\nIs\r\nAwesome`;
+ctaText.setAttribute('style', 'white-space: pre-line');
+//ctaText.textContent = siteContent.cta.h1;
 
 const ctaBtn = document.querySelector('button');
 ctaBtn.textContent = siteContent.cta.button;
