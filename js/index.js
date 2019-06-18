@@ -66,7 +66,6 @@ navLinks.forEach(function (currentValue, index) {
 // navFaq.href = `#`;
 // navFaq.textContent = "FAQ";
 const addLink = document.querySelector('nav');
-addLink.style.color="green";
 
 const navFaqLink = document.createElement('a');
 navFaqLink.textContent = 'FAQ';
@@ -80,7 +79,7 @@ navBlogLink.style.color = 'green';
 addLink.prepend(navBlogLink);
 
 // turn nav links green
-navLinks.forEach(function(currentValue, index) {
+navLinks.forEach(function(currentValue) {
   currentValue.element = currentValue.style.color = "green";
 });
 
