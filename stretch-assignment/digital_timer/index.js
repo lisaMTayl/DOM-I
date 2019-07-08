@@ -12,9 +12,6 @@ let secondOnesAccum = 0;
 let secondTensAccum = 0;
 
     // begin timer
-
-
-
     function plusMsTens() {
         msTensAccum++;
         // display msTens
@@ -43,7 +40,7 @@ let secondTensAccum = 0;
         if (secondOnesAccum < 9) {
         secondOnes.textContent = `${secondOnesAccum}`;
         } else {
-        secondTensAccum++;  // call secondTens function
+        plusSecondTens();  // call secondTens function
         secondOnes.textContent = `0`;
         }
     }
@@ -51,16 +48,13 @@ let secondTensAccum = 0;
     function plusSecondTens() {
         secondTensAccum++;
         // display secondTens
-        if (secondTensAccum === 9) {
-                secondTens.textContent = `0`;
-            } else {
+        if (secondTensAccum < 9) {
             secondTens.textContent = `${secondTensAccum}`;
+            } else {
+            clearInterval(intervalID);
         }
     }
 
-setTimeout(function () {
-    clearInterval(timer);
-}, 11000);
 
 const intervalID = window.setInterval(plusMsTens, 10);
 
