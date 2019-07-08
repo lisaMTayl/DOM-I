@@ -40,8 +40,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/stretch-assignment/digital_timer/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+                <state relative-caret-position="486">
+                  <caret line="60" lean-forward="true" selection-end-line="60" />
                 </state>
               </provider>
             </entry>
@@ -238,12 +238,12 @@
       <workItem from="1562591964810" duration="1009000" />
       <workItem from="1562592995408" duration="623000" />
       <workItem from="1562596293575" duration="1289000" />
-      <workItem from="1562613739897" duration="11258000" />
+      <workItem from="1562613739897" duration="11944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58644000" />
+    <option name="totallyTimeSpent" value="59330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="1080" width="1920" height="1080" extended-state="6" />
@@ -266,7 +266,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23452769" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23452769" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -397,8 +397,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stretch-assignment/digital_timer/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        <state relative-caret-position="486">
+          <caret line="60" lean-forward="true" selection-end-line="60" />
         </state>
       </provider>
     </entry>
